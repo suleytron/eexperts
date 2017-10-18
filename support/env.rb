@@ -4,10 +4,11 @@ require 'pry'
 require 'date'
 require 'capybara'
 
-driver = Selenium::WebDriver.for :firefox
+# driver = Selenium::WebDriver.for :chrome
+# driver.get 'http://hotel-test.equalexperts.io/'
 
-#Capybara.default_driver = driver
 
 # driver.manage.timeouts.implicit_wait = 4
 
 # driver = Selenium::WebDriver.for :chrome
+

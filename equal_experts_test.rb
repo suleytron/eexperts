@@ -1,6 +1,6 @@
-require_relative 'support/env.rb'
+load 'support/env.rb'
 
-driver = Selenium::WebDriver.for :firefox
+driver = Selenium::WebDriver.for :chrome
 
 driver.get 'http://hotel-test.equalexperts.io/'
 
@@ -32,8 +32,6 @@ element.send_keys departing
 driver.find_element(:css, '#form > div:nth-child(1) > div:nth-child(7) > input:nth-child(1)').click
 driver.navigate().refresh()
 
-
-binding.pry
 
 puts "Page title is #{driver.title}"
 driver.quit
