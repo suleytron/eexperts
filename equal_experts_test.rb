@@ -1,8 +1,6 @@
-load 'support/env.rb'
+require_relative 'features/support/env.rb'
 
-driver = Selenium::WebDriver.for :chrome
-
-driver.get 'http://hotel-test.equalexperts.io/'
+visit 'http://hotel-test.equalexperts.io/'
 
 element = driver.find_element :id => 'firstname'
 first_name = ('a'..'z').to_a.shuffle[0, 8].join
