@@ -1,5 +1,6 @@
 require_relative 'features/support/env.rb'
 
+#Capybara.default_driver = :selenium
 visit 'http://hotel-test.equalexperts.io/'
 
 element = driver.find_element :id => 'firstname'

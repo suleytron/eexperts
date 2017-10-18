@@ -5,9 +5,8 @@ require 'date'
 require 'capybara'
 require 'capybara/dsl'
 require 'capybara/cucumber'
+require 'cucumber'
 
 Capybara.default_driver = :selenium
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new app, browser: :chrome
-end
 
+World(Capybara::DSL)
